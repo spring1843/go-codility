@@ -2,7 +2,6 @@ package lesson01
 
 //Original Problem
 //https://codility.com/programmers/task/binary_gap/
-
 func BinaryGap(N int) int {
 	divisor, remainder := -1, -1
 	maxGap, currentGap := 0, 0
