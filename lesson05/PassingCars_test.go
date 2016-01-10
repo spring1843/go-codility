@@ -24,9 +24,9 @@ func DisabledForPerformanceTestOneBillionPassingCars(t *testing.T) {
 	var cars []int
 	i := 0
 	for i < 2000000000 {
-		if i % 2 == 0 {
+		if i%2 == 0 {
 			cars = append(cars, 1)
-		}else{
+		} else {
 			cars = append(cars, 0)
 		}
 

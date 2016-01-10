@@ -3,7 +3,6 @@ package lesson09
 //Original Problem:
 //https://codility.com/programmers/task/max_slice_sum/
 func MaxSliceSum(A []int) int {
-
 	if len(A) == 0 {
 		return -1
 	}
