@@ -1,0 +1,20 @@
+### Application
+*.log
+
+### Go template
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+### OSX template
+.DS_Store
+.AppleDouble
+.LSOverride
+
