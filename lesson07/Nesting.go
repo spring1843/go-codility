@@ -12,41 +12,40 @@ func Nesting(S string) int {
 		return 0
 	}
 
-	queue := StackADT{Stack: ``}
-
-	dequeuedElement := ``
+	stack := Stack{Stack: ``}
+	deQueuedElement := ``
 
 	i := 0
 	for i < len(S) {
 		currentChar := S[i : i+1]
 		if currentChar == `(` {
-			queue.enStack(currentChar)
+			stack.push(currentChar)
 		}
 
 		if currentChar == `)` {
-			dequeuedElement = queue.deStack()
-			if dequeuedElement == `` {
+			deQueuedElement = stack.pop()
+			if deQueuedElement == `` {
 				return 0
 			}
 		}
 		i++
 	}
 
-	if queue.isEmpty() == true {
+	if stack.isEmpty() == true {
 		return 1
 	}
 	return 0
 }
 
-type StackADT struct {
+type Stack struct {
 	Stack string
 }
 
-func (q *StackADT) enStack(char string) {
+func (q *Stack) push(char string) {
 	q.Stack += char
 }
 
-func (q *StackADT) deStack() string {
+func (q *Stack) pop() string {
 	if q.isEmpty() == true {
 		return ``
 	}
@@ -56,11 +55,11 @@ func (q *StackADT) deStack() string {
 	return element
 }
 
-func (q *StackADT) size() int {
+func (q *Stack) size() int {
 	return len(q.Stack)
 }
 
-func (q *StackADT) isEmpty() bool {
+func (q *Stack) isEmpty() bool {
 	if q.size() == 0 {
 		return true
 	}

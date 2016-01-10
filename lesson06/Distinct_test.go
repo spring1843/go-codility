@@ -13,6 +13,12 @@ func TestSolution(t *testing.T) {
 		t.Errorf("Distinct failed, expected %d, got %d", expected, actual)
 	}
 
+	actual = lesson06.Distinct([]int{})
+	expected = 0
+	if actual != expected {
+		t.Errorf("Distinct failed, expected %d, got %d", expected, actual)
+	}
+
 	actual = lesson06.Distinct([]int{2, 1})
 	expected = 2
 	if actual != expected {
