@@ -7,9 +7,14 @@ import (
 )
 
 func TestFrogJmp(t *testing.T) {
-	actual := lesson03.FrogJmp(10, 41, 30)
-	expected := 2
+	actual := lesson03.FrogJmp(10, 85, 30)
+	expected := 3
+	if actual != expected {
+		t.Errorf("FrogJmp failed, expected %d, got %d", expected, actual)
+	}
 
+	actual = lesson03.FrogJmp(10, 41, 30)
+	expected = 2
 	if actual != expected {
 		t.Errorf("FrogJmp failed, expected %d, got %d", expected, actual)
 	}

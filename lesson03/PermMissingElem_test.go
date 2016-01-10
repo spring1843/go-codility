@@ -8,9 +8,22 @@ import (
 )
 
 func TestPermMissingElem(t *testing.T) {
-	solutionArray := lesson03.PermMissingElem(5, []int{3, 4, 4, 6, 1, 4, 4})
+	actual := lesson03.PermMissingElem([]int{2,3,1,5})
+	expected := 4
 
-	if reflect.DeepEqual(solutionArray, []int{3, 2, 2, 4, 2}) != true {
-		t.Error("missmatch for first case, expected 3,2,4,2 , got %d", solutionArray)
+	if reflect.DeepEqual(actual, expected) != true {
+		t.Errorf("PermMissingElm failed, expected %d, got %d", expected, actual)
+	}
+
+	actual = lesson03.PermMissingElem([]int{})
+	expected = 1
+	if reflect.DeepEqual(actual, expected) != true {
+		t.Errorf("PermMissingElm failed, expected %d, got %d", expected, actual)
+	}
+
+	actual = lesson03.PermMissingElem([]int{2})
+	expected = 1
+	if reflect.DeepEqual(actual, expected) != true {
+		t.Errorf("PermMissingElm failed, expected %d, got %d", expected, actual)
 	}
 }
