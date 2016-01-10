@@ -20,6 +20,7 @@ func TestPassingCars(t *testing.T) {
 	}
 }
 
+// This test is disabled because it takes too long
 func DisabledForPerformanceTestOneBillionPassingCars(t *testing.T) {
 	var cars []int
 	i := 0
