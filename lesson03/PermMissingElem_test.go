@@ -8,7 +8,7 @@ import (
 )
 
 func TestPermMissingElem(t *testing.T) {
-	actual := lesson03.PermMissingElem([]int{2,3,1,5})
+	actual := lesson03.PermMissingElem([]int{2, 3, 1, 5})
 	expected := 4
 
 	if reflect.DeepEqual(actual, expected) != true {

@@ -11,6 +11,13 @@ func TestTapeEquilibrium(t *testing.T) {
 	expected := 1
 
 	if actual != expected {
-		t.Errorf("PermMissingElm failed, expected %d, got %d", expected, actual)
+		t.Errorf("TapeEquilibrium failed, expected %d, got %d", expected, actual)
 	}
+
+	actual = lesson03.TapeEquilibrium([]int{3, 1})
+	expected = 2
+	if actual != expected {
+		t.Errorf("TapeEquilibrium failed, expected %d, got %d", expected, actual)
+	}
+
 }

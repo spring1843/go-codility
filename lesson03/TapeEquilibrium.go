@@ -7,11 +7,18 @@ import (
 // Original Problem
 // https://codility.com/programmers/task/tape_equilibrium/
 func TapeEquilibrium(A []int) int {
+	if len(A) == 2 {
+		return int(math.Abs(float64(A[0] - A[1])))
+	}
+
 	var mindiff float64 = 1001
 	N := len(A)
-	P := 0
-	headSum := 0
-	tailSum := getArraySum(A)
+	P, headSum, tailSum := 0, 0, 0
+
+	for _, v := range A {
+		tailSum += v
+	}
+
 	for P < N-1 {
 		headSum += A[P]
 		tailSum -= A[P]
@@ -23,14 +30,4 @@ func TapeEquilibrium(A []int) int {
 	}
 
 	return int(mindiff)
-}
-
-func getArraySum(A []int) int {
-	sum := 0
-	i := 0
-	for i < len(A) {
-		sum += A[i]
-		i++
-	}
-	return sum
 }

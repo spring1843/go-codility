@@ -18,4 +18,16 @@ func TestFrogJmp(t *testing.T) {
 	if actual != expected {
 		t.Errorf("FrogJmp failed, expected %d, got %d", expected, actual)
 	}
+
+	actual = lesson03.FrogJmp(4, 1, 1)
+	expected = 0
+	if actual != expected {
+		t.Errorf("FrogJmp failed, expected %d, got %d", expected, actual)
+	}
+
+	actual = lesson03.FrogJmp(10, 20, 10)
+	expected = 1
+	if actual != expected {
+		t.Errorf("FrogJmp failed, expected %d, got %d", expected, actual)
+	}
 }
